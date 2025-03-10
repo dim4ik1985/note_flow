@@ -1,4 +1,7 @@
-export default function Import({ width = 1.5, className, alt }) {
+import IIconProps from "../../models/models.ts";
+
+export default function ArrowSwap(props: IIconProps) {
+  const { className, width = 1.5, alt } = props;
   return (
     <svg
       width="24"
@@ -6,25 +9,32 @@ export default function Import({ width = 1.5, className, alt }) {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-label={alt}
       className={className}
-      alt={alt}
     >
       <path
-        d="M9.31995 11.6802L11.8799 14.2402L14.4399 11.6802"
+        d="M20.5 14.9902L15.49 20.0102"
         strokeWidth={width}
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M11.88 4V14.17"
+        d="M3.5 14.9902H20.5"
         strokeWidth={width}
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M20 12.1802C20 16.6002 17 20.1802 12 20.1802C7 20.1802 4 16.6002 4 12.1802"
+        d="M3.5 9.01023L8.51 3.99023"
+        strokeWidth={width}
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20.5 9.00977H3.5"
         strokeWidth={width}
         strokeMiterlimit="10"
         strokeLinecap="round"

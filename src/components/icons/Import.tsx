@@ -1,4 +1,7 @@
-export default function Lock({ width = 1.5, className, alt }) {
+import IIconProps from "../../models/models.ts";
+
+export default function Import(props: IIconProps) {
+  const { className, width = 1.5, alt } = props;
   return (
     <svg
       width="24"
@@ -7,23 +10,26 @@ export default function Lock({ width = 1.5, className, alt }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      alt={alt}
+      aria-label={alt}
     >
       <path
-        d="M6 10V8C6 4.69 7 2 12 2C17 2 18 4.69 18 8V10"
+        d="M9.31995 11.6802L11.8799 14.2402L14.4399 11.6802"
         strokeWidth={width}
+        strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M12 18.5C13.3807 18.5 14.5 17.3807 14.5 16C14.5 14.6193 13.3807 13.5 12 13.5C10.6193 13.5 9.5 14.6193 9.5 16C9.5 17.3807 10.6193 18.5 12 18.5Z"
+        d="M11.88 4V14.17"
         strokeWidth={width}
+        strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M17 22H7C3 22 2 21 2 17V15C2 11 3 10 7 10H17C21 10 22 11 22 15V17C22 21 21 22 17 22Z"
+        d="M20 12.1802C20 16.6002 17 20.1802 12 20.1802C7 20.1802 4 16.6002 4 12.1802"
         strokeWidth={width}
+        strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

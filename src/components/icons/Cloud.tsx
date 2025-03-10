@@ -1,4 +1,7 @@
-export default function Cloud({ width = 1.5, className, alt }) {
+import IIconProps from "../../models/models.ts";
+
+export default function Cloud(props: IIconProps) {
+  const { className, width = 1.5, alt } = props;
   return (
     <svg
       width="24"
@@ -7,7 +10,7 @@ export default function Cloud({ width = 1.5, className, alt }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      alt={alt}
+      aria-label={alt}
     >
       <path
         d="M5.54003 11.1201C0.860029 11.4501 0.860029 18.2601 5.54003 18.5901H7.46007"

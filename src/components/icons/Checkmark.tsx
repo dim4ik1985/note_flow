@@ -1,4 +1,7 @@
-export default function Checkmark({ width = 1.5, className, alt }) {
+import IIconProps from "../../models/models.ts";
+
+export default function Checkmark(props: IIconProps) {
+  const { className, width = 1.5, alt } = props;
   return (
     <svg
       width="10"
@@ -7,7 +10,7 @@ export default function Checkmark({ width = 1.5, className, alt }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      alt={alt}
+      aria-label={alt}
     >
       <path
         d="M0.75 3.99992L3.58 6.82992L9.25 1.16992"

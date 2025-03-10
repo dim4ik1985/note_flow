@@ -1,4 +1,7 @@
-export default function Search({ width = 1.5, className, alt }) {
+import IIconProps from "../../models/models.ts";
+
+export default function Search(props: IIconProps) {
+  const { className, width = 1.5, alt } = props;
   return (
     <svg
       width="24"
@@ -7,7 +10,7 @@ export default function Search({ width = 1.5, className, alt }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      alt={alt}
+      aria-label={alt}
     >
       <path
         d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
@@ -15,12 +18,7 @@ export default function Search({ width = 1.5, className, alt }) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path
-        d="M22 22L20 20"
-        strokeWidth={width}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <path d="M22 22L20 20" strokeWidth={width} strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }

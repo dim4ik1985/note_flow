@@ -1,4 +1,7 @@
-export default function SMSNotification({ width = 1.5, className, alt }) {
+import IIconProps from "../../models/models.ts";
+
+export default function SMSNotification(props: IIconProps) {
+  const { className, width = 1.5, alt } = props;
   return (
     <svg
       width="24"
@@ -7,7 +10,7 @@ export default function SMSNotification({ width = 1.5, className, alt }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      alt={alt}
+      aria-label={alt}
     >
       <path
         d="M22 10.5V15.5C22 19 20 20.5 17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H14"

@@ -1,4 +1,4 @@
-import IIconProps from '../../models/models.ts';
+import IIconProps from "../../models/models.ts";
 
 export const Logo = (props: IIconProps) => {
   const { className, width = 1.5, alt } = props;

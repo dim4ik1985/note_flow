@@ -1,11 +1,8 @@
 import { motion } from "motion/react";
+import IIconProps from "../../models/models.ts";
 
-export default function CaretUp({
-  width = 1.5,
-  className,
-  alt,
-  activeQuestion,
-}) {
+export default function CaretUp(props: IIconProps) {
+  const { className, width = 1.5, alt, activeQuestion } = props;
   return (
     <motion.svg
       width="24"

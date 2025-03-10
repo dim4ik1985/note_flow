@@ -1,4 +1,7 @@
-export default function Slack({ width = 1.5, className, alt }) {
+import IIconProps from "../../models/models.ts";
+
+export default function Slack(props: IIconProps) {
+  const { className, width = 1.5, alt } = props;
   return (
     <svg
       width="24"
@@ -7,7 +10,7 @@ export default function Slack({ width = 1.5, className, alt }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      alt={alt}
+      aria-label={alt}
     >
       <path
         d="M14.5 2.2998C13.5 2.2998 12.6 3.0998 12.6 4.1998V8.7998C12.6 9.7998 13.4 10.6998 14.5 10.6998C15.5 10.6998 16.4 9.8998 16.4 8.7998V4.0998C16.4 3.0998 15.6 2.2998 14.5 2.2998Z"
