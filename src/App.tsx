@@ -1,7 +1,13 @@
+import { Header, Hero, Navigation, Page, Reviews } from './components/sections';
+
 export const App = () => {
   return (
-    <div className={'flex h-screen items-center justify-center'}>
-      <div>App</div>
-    </div>
+    <Page>
+      <Header>
+        <Navigation />
+        <Hero />
+        <Reviews />
+      </Header>
+    </Page>
   );
 };
