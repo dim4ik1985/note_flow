@@ -1,6 +1,6 @@
 import IIconProps from "../../models/models.ts";
 
-export default function Checkmark(props: IIconProps) {
+export const Checkmark = (props: IIconProps) => {
   const { className, width = 1.5, alt } = props;
   return (
     <svg
@@ -20,4 +20,4 @@ export default function Checkmark(props: IIconProps) {
       />
     </svg>
   );
-}
+};

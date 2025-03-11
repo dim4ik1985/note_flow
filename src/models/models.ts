@@ -30,3 +30,8 @@ export interface ITestimonial {
   name: string;
   title: string;
 }
+
+export interface ModalContextType {
+  activeModal: string;
+  setActiveModal: (modal: string) => void;
+}

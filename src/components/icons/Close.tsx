@@ -1,6 +1,6 @@
 import IIconProps from "../../models/models.ts";
 
-export default function Close(props: IIconProps) {
+export const Close = (props: IIconProps) => {
   const { className, width = 1.5, alt } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ export default function Close(props: IIconProps) {
       <path d="M18 18L6 6" strokeWidth={width} strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
-}
+};

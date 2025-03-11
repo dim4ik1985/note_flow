@@ -17,21 +17,31 @@ import { Testimonials } from "./components/sections/Testimonials/Testimonials.ts
 // footer
 import { Footer } from "./components/sections/Footer.tsx";
 
+// modal
+import { Modal } from "./components/sections/Modal/Modal.tsx";
+import { SignUpModal } from "./components/sections/Modal/SignUpModal.tsx";
+import { ModalContextProvider } from "./context/ModalContext.tsx";
+
 export const App = () => {
   return (
-    <Page>
-      <Header>
-        <Navigation />
-        <Hero />
-        <Reviews />
-      </Header>
-      <Main>
-        <Logos />
-        <Features />
-        <FaQs />
-        <Testimonials />
-      </Main>
-      <Footer />
-    </Page>
+    <ModalContextProvider>
+      <Page>
+        <Header>
+          <Navigation />
+          <Hero />
+          <Reviews />
+        </Header>
+        <Main>
+          <Logos />
+          <Features />
+          <FaQs />
+          <Testimonials />
+        </Main>
+        <Footer />
+        <Modal modal={"sign-up"}>
+          <SignUpModal />
+        </Modal>
+      </Page>
+    </ModalContextProvider>
   );
 };
