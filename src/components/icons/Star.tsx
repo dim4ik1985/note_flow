@@ -1,6 +1,6 @@
 import IIconProps from "../../models/models.ts";
 
-export default function Star(props: IIconProps) {
+export const Star = (props: IIconProps) => {
   const { className, width = 1.5, alt } = props;
   return (
     <svg
@@ -21,4 +21,4 @@ export default function Star(props: IIconProps) {
       />
     </svg>
   );
-}
+};

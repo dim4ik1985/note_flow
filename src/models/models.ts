@@ -21,3 +21,12 @@ export interface IFaqListProps {
   activeQuestion: number | null;
   handleQuestionClick: (id: number) => void;
 }
+
+export interface ITestimonial {
+  id: number;
+  rating: number;
+  description: string;
+  src: URL;
+  name: string;
+  title: string;
+}
