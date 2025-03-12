@@ -1,6 +1,6 @@
 import IIconProps from "../../models/models.ts";
 
-export default function Menu(props: IIconProps) {
+export const Menu = (props: IIconProps) => {
   const { className, width = 1.5, alt } = props;
   return (
     <svg
@@ -40,4 +40,4 @@ export default function Menu(props: IIconProps) {
       />
     </svg>
   );
-}
+};

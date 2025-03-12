@@ -22,26 +22,34 @@ import { Modal } from "./components/sections/Modal/Modal.tsx";
 import { SignUpModal } from "./components/sections/Modal/SignUpModal.tsx";
 import { ModalContextProvider } from "./context/ModalContext.tsx";
 
+// Mobile menu
+import { MobileMenu } from "./components/sections/MobileMenu/MobileMenu.tsx";
+import { MobileMenuContextProvider } from "./context/MobileMenuContext.tsx";
+
 export const App = () => {
   return (
-    <ModalContextProvider>
-      <Page>
-        <Header>
-          <Navigation />
-          <Hero />
-          <Reviews />
-        </Header>
-        <Main>
-          <Logos />
-          <Features />
-          <FaQs />
-          <Testimonials />
-        </Main>
-        <Footer />
-        <Modal modal={"sign-up"}>
-          <SignUpModal />
-        </Modal>
-      </Page>
-    </ModalContextProvider>
+    <MobileMenuContextProvider>
+      <ModalContextProvider>
+        <Page>
+          <Header>
+            <Navigation />
+            <Hero />
+            <Reviews />
+          </Header>
+          <Main>
+            <Logos />
+            <Features />
+            <FaQs />
+            <Testimonials />
+          </Main>
+          <Footer />
+          <Modal modal={"sign-up"}>
+            <SignUpModal />
+          </Modal>
+
+          <MobileMenu />
+        </Page>
+      </ModalContextProvider>
+    </MobileMenuContextProvider>
   );
 };

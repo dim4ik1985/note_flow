@@ -37,7 +37,7 @@ export const Testimonial = ({ test }: { test: ITestimonial }): JSX.Element => {
     // Use the motion library to animate the component
     <motion.li
       // Set the initial and whileInView styles for the animation
-      className={"bg-primary-1300 rounded-2xl px-8 py-10"}
+      className={"bg-primary-1300 rounded-2xl px-8 py-10 max-xl:px-6 max-xl:py-8"}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       // Set the viewport and transition settings for the animation
@@ -50,12 +50,20 @@ export const Testimonial = ({ test }: { test: ITestimonial }): JSX.Element => {
       }}
     >
       <div className={"flex gap-x-1 pb-8"}>{stars}</div>
-      <p className={"text-primary-50 pb-16 text-lg/loose font-light"}>{description}</p>
-      <div className={"flex items-center gap-x-6"}>
-        <img src={src.toString()} alt="Profile Picture" className={"h-18 rounded-full"} />
+      <p className={"text-primary-50 pb-16 text-lg/loose font-light max-xl:text-base/loose"}>
+        {description}
+      </p>
+      <div className={"flex items-center gap-x-6 max-xl:gap-x-4"}>
+        <img
+          src={src.toString()}
+          alt="Profile Picture"
+          className={"h-18 rounded-full max-xl:h-14"}
+        />
         <div>
-          <p className={"text-primary-500 text-xl/7 font-bold tracking-tight"}>{name}</p>
-          <p className={"text-primary-75 text-base/loose tracking-tight"}>{title}</p>
+          <p className={"text-primary-500 text-xl/7 font-bold tracking-tight max-xl:text-lg"}>
+            {name}
+          </p>
+          <p className={"text-primary-75 text-base/loose tracking-tight max-xl:text-sm"}>{title}</p>
         </div>
       </div>
     </motion.li>

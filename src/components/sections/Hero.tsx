@@ -1,29 +1,38 @@
 import { ArrowRightLine } from "../icons/ArrowRightLine.tsx";
 import ArrowRight from "../icons/ArrowRight.tsx";
 import HeroGraphic from "../../assets/graphics/HeroGraphic.webp";
-import useModalContext from "../../context/UseModalContext.tsx";
+import { useModalContext } from "../../context/UseModalContext.tsx";
 
 export const Hero = () => {
   const { setActiveModal } = useModalContext();
+
   return (
-    <div
-      className={"m-auto grid max-w-[90rem] grid-cols-[5fr_4fr] items-center gap-x-18 px-24 py-42"}
+    <section
+      className={
+        "m-auto grid max-w-[90rem] grid-cols-[5fr_4fr] items-center gap-x-18 px-24 py-42 max-xl:grid-cols-2 max-xl:gap-x-12 max-xl:px-16 max-xl:py-38 max-lg:px-8 max-lg:py-32"
+      }
     >
       <div>
-        <h1 className={"text-primary-50 mb-6 text-6xl/18 font-semibold tracking-tighter"}>
+        <h1
+          className={
+            "text-primary-50 max-lg:4xl/10 mb-6 text-6xl/18 font-semibold tracking-tighter max-xl:mb-4 max-xl:text-5xl/16"
+          }
+        >
           AI-Powered Notes. Organize and Summarize in Seconds
         </h1>
-        <p className={"text-primary-100 mb-10 text-xl/loose font-light"}>
+        <p
+          className={"text-primary-100 mb-10 text-xl/loose font-light max-xl:mb-8 max-xl:text-lg/8"}
+        >
           Let AI organize & summarize your notes, <br /> saving you time and boosting productivity
         </p>
         <button
           className={
-            "text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 transition-properties primary-glow-hover primary-glow group flex cursor-pointer items-center gap-x-3 rounded-full border-2 px-8 py-3.5"
+            "text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 transition-properties primary-glow-hover primary-glow group flex cursor-pointer items-center gap-x-3 rounded-full border-2 px-8 py-3.5 max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
           }
           onClick={() => setActiveModal("sign-up")}
         >
-          <p className={"text-lg/8"}>Get Started</p>
-          <div className={"w-5"}>
+          <p className={"text-lg/8 max-xl:text-base/loose"}>Get Started</p>
+          <div className={"w-5 max-xl:w-4"}>
             <ArrowRightLine
               alt={"Arrow right line"}
               className={
@@ -33,7 +42,7 @@ export const Hero = () => {
             />
             <ArrowRight
               alt={"Arrow right icon"}
-              className={"stroke-primary-1300 inline w-5"}
+              className={"stroke-primary-1300 inline w-5 max-xl:w-4"}
               width={2}
             />
           </div>
@@ -49,6 +58,6 @@ export const Hero = () => {
           className={"relative max-h-[30rem] justify-self-end"}
         />
       </div>
-    </div>
+    </section>
   );
 };

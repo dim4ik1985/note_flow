@@ -21,9 +21,11 @@ export const FaQs = () => {
 
   return (
     <section className={"bg-gradient-to-bottom justify-items-center"}>
-      <div className={"w-full max-w-[90rem] py-32"}>
+      <div className={"w-full max-w-[90rem] py-32 max-xl:px-16 max-xl:py-24"}>
         <h2
-          className={"text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tighter"}
+          className={
+            "text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tighter max-xl:mb-6 max-xl:text-5xl/16"
+          }
         >
           Frequently Asked Questions
         </h2>
@@ -41,7 +43,7 @@ export const FaQs = () => {
           {frequentlyAskedQuestions.map((obj) => (
             <li key={obj.id}>
               <button
-                className={`border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 ${obj.category === category && "bg-primary-400 text-primary-1300 border-primary-400 primary-glow"} ${obj.category !== category && "hover:bg-primary-50 hover:text-primary-1300"}`}
+                className={`border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 ${obj.category === category && "bg-primary-400 text-primary-1300 border-primary-400 primary-glow"} ${obj.category !== category && "hover:bg-primary-50 hover:text-primary-1300"} max-xl:px-6 max-xl:py-3 max-xl:text-base/loose`}
                 onClick={() => handleCategoryClick(obj.category)}
               >
                 {obj.category}

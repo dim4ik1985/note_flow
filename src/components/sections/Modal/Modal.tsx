@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { motion } from "motion/react";
-import useModalContext from "../../../context/UseModalContext.tsx";
+import { useModalContext } from "../../../context/UseModalContext.tsx";
 
 export const Modal = ({ children, modal }: { children: ReactNode; modal: string }) => {
   const { activeModal, setActiveModal } = useModalContext();
@@ -9,7 +9,7 @@ export const Modal = ({ children, modal }: { children: ReactNode; modal: string 
   return (
     <motion.div
       className={
-        "fixed top-0 right-0 bottom-0 left-0 z-50 flex items-center justify-center px-24 py-32 backdrop-blur-sm"
+        "fixed top-0 right-0 bottom-0 left-0 z-50 flex items-center justify-center px-24 py-32 backdrop-blur-sm max-xl:px-16 max-xl:py-24"
       }
       animate={activeDisplayedModal ? "visible" : "hidden"}
       variants={{

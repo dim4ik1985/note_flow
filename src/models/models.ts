@@ -35,3 +35,8 @@ export interface ModalContextType {
   activeModal: string;
   setActiveModal: (modal: string) => void;
 }
+
+export interface MobileMenuContextType {
+  mobileMenuOpened: boolean;
+  setMobileMenuOpened: (menu: boolean) => void;
+}

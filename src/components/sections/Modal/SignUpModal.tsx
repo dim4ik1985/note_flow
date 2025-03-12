@@ -1,7 +1,7 @@
 import { Close } from "../../icons/Close.tsx";
 import { Checkmark } from "../../icons/Checkmark.tsx";
 import { ChangeEvent, useState } from "react";
-import useModalContext from "../../../context/UseModalContext.tsx";
+import { useModalContext } from "../../../context/UseModalContext.tsx";
 
 const initialState = {
   email: "",
