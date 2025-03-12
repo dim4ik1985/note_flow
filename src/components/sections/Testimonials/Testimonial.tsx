@@ -37,7 +37,7 @@ export const Testimonial = ({ test }: { test: ITestimonial }): JSX.Element => {
     // Use the motion library to animate the component
     <motion.li
       // Set the initial and whileInView styles for the animation
-      className={"bg-primary-1300 rounded-2xl px-8 py-10 max-xl:px-6 max-xl:py-8"}
+      className={"bg-primary-1300 rounded-2xl px-8 py-10 max-xl:px-6 max-md:py-8"}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       // Set the viewport and transition settings for the animation
@@ -49,8 +49,12 @@ export const Testimonial = ({ test }: { test: ITestimonial }): JSX.Element => {
         }
       }}
     >
-      <div className={"flex gap-x-1 pb-8"}>{stars}</div>
-      <p className={"text-primary-50 pb-16 text-lg/loose font-light max-xl:text-base/loose"}>
+      <div className={"flex gap-x-1 pb-8 max-md:pb-6"}>{stars}</div>
+      <p
+        className={
+          "text-primary-50 pb-16 text-lg/loose font-light max-xl:text-base/loose max-md:pb-12"
+        }
+      >
         {description}
       </p>
       <div className={"flex items-center gap-x-6 max-xl:gap-x-4"}>

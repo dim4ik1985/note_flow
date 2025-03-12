@@ -9,12 +9,12 @@ export const Navigation = () => {
   return (
     <nav
       className={
-        "text-primary-50 m-auto flex max-w-[90rem] justify-between px-24 text-lg/8 font-light max-xl:px-16 max-xl:text-base/loose max-lg:px-8"
+        "text-primary-50 m-auto flex max-w-[90rem] justify-between px-24 text-lg/8 font-light max-xl:px-16 max-xl:text-base/loose max-lg:px-8 max-md:px-6"
       }
     >
-      <a href="#" className={"flex items-center gap-x-3"}>
-        <Logo className={"h-6"} width={5} alt={"logo"} />
-        <p className={"text-xl font-bold tracking-tight"}>NoteFlow</p>
+      <a href="#" className={"flex items-center gap-x-3 max-md:gap-x-2"}>
+        <Logo className={"h-6 max-md:h-5"} width={5} alt={"Note Flow logo icon"} />
+        <p className={"text-xl font-bold tracking-tight max-md:text-lg/8"}>NoteFlow</p>
       </a>
       <ul className={"flex items-center gap-x-8 max-xl:gap-x-6 max-lg:hidden"}>
         {navigationLinks.map((link) => (
